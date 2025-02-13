@@ -8,7 +8,7 @@ const Read = () => {
 
   async function getData() {
     try {
-      const response = await axios.get("http://localhost:3000/user");
+      const response = await axios.get("https://mern-lfl6.onrender.com/user");
 
       setData(response.data);
       setError("");
@@ -20,7 +20,7 @@ const Read = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/user/${id}`);
+      const response = await axios.delete(`https://mern-lfl6.onrender.com/user/${id}`);
       setError("Deleted Successfully!");
       setTimeout(() => {
         setError("");

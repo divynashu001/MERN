@@ -16,7 +16,7 @@ const Create = () => {
     const addUser = { name, email, age };
 
     try {
-      const response = await axios.post("http://localhost:3000/user", addUser, {
+      const response = await axios.post("https://mern-lfl6.onrender.com/user", addUser, {
         headers: {
           "Content-Type": "application/json",
         },

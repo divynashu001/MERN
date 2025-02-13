@@ -12,7 +12,7 @@ const Update = () => {
   let { id } = useParams();
   const getSingleUserData = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/user/${id}`);
+      const response = await axios.get(`https://mern-lfl6.onrender.com/user/${id}`);
       setName(response.data.name);
       setEmail(response.data.email);
       setAge(response.data.age);
@@ -29,7 +29,7 @@ const Update = () => {
     const updateUser = { name, email, age };
 
     try {
-      const response = await axios.patch(`http://localhost:3000/user/${id}`, updateUser, {
+      const response = await axios.patch(`https://mern-lfl6.onrender.com/user/${id}`, updateUser, {
         headers: {
           "Content-Type": "application/json",
         },
