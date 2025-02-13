@@ -7,7 +7,7 @@ const router = require("./routes/userRoute");
 const cors = require("cors");
 
 app.use(cors({
-  origin: "http://localhost:5173", // Allow requests from this origin
+  origin: ["http://localhost:5173", "https://mern-tau-gilt.vercel.app"], // Allow requests from this origin
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"], // Allow these HTTP methods
   credentials: true, // Allow cookies and credentials
 }));
