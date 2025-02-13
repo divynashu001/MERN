@@ -8,7 +8,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(cors({
-  origin: ["http://localhost:5173", "https://mern-six-tan.vercel.app"],
+  origin: ["https://mern-one-amber.vercel.app/","http://localhost:5173"],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   credentials: true
 }));
