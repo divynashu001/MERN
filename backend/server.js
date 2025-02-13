@@ -7,12 +7,7 @@ const router = require("./routes/userRoute");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
-app.use(cors({
-  origin: ["https://mern-one-amber.vercel.app/","http://localhost:5173"],
-  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-  credentials: true
-}));
-// app.use(cors());
+app.use(cors());
 app.use("/user", router);
 
 mongoose
