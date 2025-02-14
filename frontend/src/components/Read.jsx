@@ -40,24 +40,25 @@ const Read = () => {
     <div className="container my-2">
       {error && <div className="alert alert-danger">{error}</div>}
       <h1 className="text-center">All Data</h1>
-      <div className="row">
+      <div className="row d-flex justify-content-center align-items-center">
         {data?.map((ele) => (
           <div key={ele._id} className="col-4">
             <div className="card mt-3">
-              <div className="card-body text-center">
+              <div className="card-body text-center bg-gradient bg-warning">
                 <h5 className="card-title">{ele.name}</h5>
                 <h6 className="card-text">{ele.email}</h6>
                 <p className="card-text">{ele.age}</p>
-                <Link to={`${ele._id}`} className="card-link">
+                <button className="btn btn-dark px-4">
+                <Link to={`${ele._id}`} className="card-link text-white text-decoration-none ">
                   Edit
                 </Link>
-                <a
-                  href="#"
-                  className="card-link"
+                </button>
+                <button
+                  className="btn btn-danger mx-3 px-3"
                   onClick={() => handleDelete(ele._id)}
                 >
                   Delete
-                </a>
+                </button>
               </div>
             </div>
           </div>
